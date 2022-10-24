@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e15f06075f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-container">
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="3.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="4.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="1.jpg" style="width:100%">
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+  </div>
+  <div class="images-container">
+      <img src="1.jpg" alt="">
+      <img src="2.jpg" alt="">
+      <img src="3.jpg" alt="">
+      <img src="4.png" alt="">
+      <img src="1.jpg" alt="">
+  </div>
+  <br>
+  
+
+        </div>
+        <div class="right-container">
+            <div class="heading">
+                <h1>Upholstered Sofa</h1>
+            </div>
+            <div class="sub-heading">
+                <p>Kyara Upholstered Standard Bed</p>
+                <p>by Zipcode Design</p>
+            </div>
+            <div class="description">
+                <!-- <span class="normal-desc">
+                    <p>Anchor your living room in sophisticated style and impeccable</p>
+                    <p> comfort with a single addition. Perfectly
+                        balancing wood</p>
+                    <p> accents with fabric upholstery.</p>
+                </span> -->
+                <!-- <span class="resp-desc"> -->
+                    <p>
+                    Anchor your living room in sophisticated style and impeccable comfort with a single addition.
+                    Perfectly
+                    balancing wood accents with fabric upholstery.</p>
+                <!-- </span> -->
+            </div>
+            <div class="review">
+                <div class="star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="ratings">
+                    <p><span>(5.0)</span> review based on 250</p>
+                    <div class="submit-review">
+                        <p><a href="/">Submit Review</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="price">
+                <p>$567</p>
+            </div>
+            <div class="buyinfo">
+                <p><i class="fa fa-clock-o"></i>Dispatched in 7 working days</p>
+                <div class="buy-btns">
+                    <button class="cart-btn">ADD TO CART</button>
+                    <button class="wlist-btn">ADD TO WISHLIST</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-container">
+        <div class="payment">
+            <div class="icon"><i class="fa fa-credit-card-alt"></i></div>
+            <div class="b-content">
+                <div class="b-content-head">
+                    <h3>Secure Payment</h3>
+                </div>
+                <div class="b-content-sub-head">
+                    Don't worry, your money is <p> secure places
+                </div>
+            </div>
+        </div>
+        <div class="delivery">
+            <div class="icon"><i class="fa fa-truck"></i></div>
+            <div class="b-content">
+                <div class="b-content-head">
+                    <h3>Fast & Free delivery</h3>
+                </div>
+                <div class="b-content-sub-head">Home delivery $15. For free <p> order over $250</p>
+                </div>
+            </div>
+        </div>
+        <div class="return">
+            <div class="icon"><i class="fas fa-people-carry"></i></div>
+            <div class="b-content">
+                <div class="b-content-head">
+                    <h3>Return policy</h3>
+                </div>
+                <div class="b-content-sub-head">No hassle return policy</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</html>
